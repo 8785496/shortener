@@ -1,5 +1,6 @@
 Shortener
 ==========
+Сервис коротких ссылок.
 Системные требования
 -------------------
 
@@ -11,9 +12,9 @@ Shortener
 Инструкции по установке
 -----------------------
 
-1. Распакуйте shortener.zip файл в доступную из Веб директорию.
+1 Распакуйте shortener.zip файл в доступную из Веб директорию.
 
-2. Создайте базу данных с названием ```shortener```. Затем создайте таблицу ```url``` в базе данных. Можете импортировать файл ```config/url.sql```.
+2 Создайте базу данных с названием ```shortener```. Затем создайте таблицу ```url``` в базе данных. Можете импортировать файл ```config/url.sql```.
 
 ```
 CREATE TABLE IF NOT EXISTS `url` (
@@ -23,7 +24,7 @@ CREATE TABLE IF NOT EXISTS `url` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1024;
 ```
 
-3. В файле ```config/db.php``` измените параметры ```<your host>, <your databasename>, <your username>, <your password>``` на правильные для вашего MySQL сервера.
+3 В файле ```config/db.php``` измените параметры ```<your host>, <your databasename>, <your username>, <your password>``` на правильные для вашего MySQL сервера.
 
 ```
 $db = Array(
@@ -33,7 +34,7 @@ $db = Array(
 );
 ```
  
-4. Рекомендованная конфигурация сервера Apache
+4 Рекомендованная конфигурация сервера Apache
 
 Используйте следующую конфигурацию в файле ```httpd.conf``` сервера Apache.
 Замените ```path for index.php``` на существущий путь для файла ```index.php```.
