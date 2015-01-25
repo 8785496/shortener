@@ -1,5 +1,6 @@
 # shortener
 SYSTEM REQUIREMENTS
+-------------------
 
 1. Apache HTTP Server
 2. PHP 5.3 or higher
@@ -7,6 +8,7 @@ SYSTEM REQUIREMENTS
 4. MySQL Server
 
 INSTALLATION INSTRUCTIONS
+-------------------------
 
 1. Unpack the shortener.zip file to a Web-accessible folder.
 
@@ -20,18 +22,20 @@ CREATE TABLE IF NOT EXISTS `url` (
 
 3. In the config/db.php file change the parameters <your host>, <your databasename>, <your username>, <your password> to be correct for your MySQL Server.
 
+```
 $db = Array(
     'dsn' => 'mysql:host=<your host>;dbname=<your db>;charset=utf8',
     'username' => '<your username>',
     'password' => '<your password>',
 );
+```
  
 4. Recommended Apache Configuration
 
 Use the following configuration in Apache's httpd.conf file.
 You should replace "path for index.php" with the actual path for index.php file.
 
-#######################################
+```
 DocumentRoot "path for index.php"
 
 <Directory "path for index.php">
@@ -45,4 +49,4 @@ DocumentRoot "path for index.php"
 
     # ...other settings...
 </Directory>
-#######################################
+```
