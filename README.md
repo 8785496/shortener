@@ -1,5 +1,6 @@
-# shortener
-SYSTEM REQUIREMENTS
+Shortener
+==========
+Системные требования
 -------------------
 
 1. Apache HTTP Server
@@ -7,18 +8,20 @@ SYSTEM REQUIREMENTS
 3. PDO PHP extension and the PDO driver pdo_mysql
 4. MySQL Server
 
-INSTALLATION INSTRUCTIONS
--------------------------
+Инструкции по установке
+-----------------------
 
 1. Unpack the shortener.zip file to a Web-accessible folder.
 
 2. Create a database named shortener. Then create a table named url in the database. Can import config/url.sql file.
 
+```
 CREATE TABLE IF NOT EXISTS `url` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `long_url` text NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1024;
+```
 
 3. In the config/db.php file change the parameters <your host>, <your databasename>, <your username>, <your password> to be correct for your MySQL Server.
 
