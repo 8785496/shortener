@@ -11,9 +11,9 @@ Shortener
 Инструкции по установке
 -----------------------
 
-1. Unpack the shortener.zip file to a Web-accessible folder.
+1. Распакуйте shortener.zip файл в доступную из Веб директорию.
 
-2. Create a database named shortener. Then create a table named url in the database. Can import config/url.sql file.
+2. Создайте базу данных с названием ```shortener```. Затем создайте таблицу ```url``` в базе данных. Можете импортировать файл ```config/url.sql```.
 
 ```
 CREATE TABLE IF NOT EXISTS `url` (
@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `url` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1024;
 ```
 
-3. In the config/db.php file change the parameters <your host>, <your databasename>, <your username>, <your password> to be correct for your MySQL Server.
+3. В файле ```config/db.php``` измените параметры ```<your host>, <your databasename>, <your username>, <your password>``` на правильные для вашего MySQL сервера.
 
 ```
 $db = Array(
@@ -33,10 +33,10 @@ $db = Array(
 );
 ```
  
-4. Recommended Apache Configuration
+4. Рекомендованная конфигурация сервера Apache
 
-Use the following configuration in Apache's httpd.conf file.
-You should replace "path for index.php" with the actual path for index.php file.
+Используйте следующую конфигурацию в файле ```httpd.conf``` сервера Apache.
+Замените ```path for index.php``` на существущий путь для файла ```index.php```.
 
 ```
 DocumentRoot "path for index.php"
@@ -53,3 +53,4 @@ DocumentRoot "path for index.php"
     # ...other settings...
 </Directory>
 ```
+Или используйте файл ```.htaccess```
